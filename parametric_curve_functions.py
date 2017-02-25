@@ -49,6 +49,7 @@ def bezier_poly_interact(ctrl_points, pt, t=0.5, P1x=-1, P1y=2, P2x=3, P2y=2):
     plt.subplot(1,2,2)
     for i in range(n+1): 
         plt.plot(u,Bi[i]), plt.plot(u[t],Bi[i][t],'ko')
+    plt.axvline(u[t],color='k', linestyle='dotted')
     plt.title('Blending functions')
     
 def non_preiodic_knot(n,k):
