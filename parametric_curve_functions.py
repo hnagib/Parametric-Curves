@@ -8,7 +8,7 @@ import seaborn as sns
 def bezier_poly_interact(ctrl_points, pt, t=0.5, P1x=-1, P1y=2, P2x=3, P2y=2):
     '''
         Inputs
-        ctlr_points:
+        ctrl_points:
             0 (or any int): Use default set of control points
             P_i: Use set of control points specified in P_i
         t: value between 0 and 1 for indexing a point on the blending functions 
