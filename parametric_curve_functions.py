@@ -200,7 +200,7 @@ def plot_bspline_blendfunc(t, N, P_i, P_u, u, u_i,k):
 def B_spline_interact(ctrl_points, pt=8, k=4, t=0.5, P1x=-1,P1y=2):
     '''
         Inputs
-        ctlr_points:
+        ctrl_points:
             0 (or any int): Use default set of control points
             P_i: Use set of control points specified in P_i
         t: value between 0 and 1 for indexing a point on the blending functions 
