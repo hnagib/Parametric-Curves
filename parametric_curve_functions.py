@@ -70,7 +70,7 @@ def bezier_poly_interact(ctrl_points, pt, t=0.5, P1x=-1, P1y=2, P2x=3, P2y=2):
 # Functions for constructing and plotting B-Spline Curves 
 # ------------------------------------------------------------------------
     
-def non_preiodic_knot(n,k):
+def non_periodic_knot(n,k):
     '''
         Inputs
         k: order of curve
@@ -158,7 +158,7 @@ def B_spline(N,u,u_i,P_i,k):
     
     return P_u
 
-def plot_bsline_blendfunc(t, N, P_i, P_u, u, u_i,k):
+def plot_bspline_blendfunc(t, N, P_i, P_u, u, u_i,k):
     '''
         Inputs
         t: value between u_i[0] and u_i[-1] for indexing a point on the blending functions 
@@ -236,10 +236,10 @@ def B_spline_interact(ctrl_points, pt=8, k=4, t=0.5, P1x=-1,P1y=2):
     elif k == 0:
         print("k must be greater than 0")
     else:
-        u_i = non_preiodic_knot(n,k)        
+        u_i = non_periodic_knot(n,k)        
         u   = np.arange(u_i[k-1],u_i[n+1],h)
         t = int((t/h)*u_i[-1])
         N   = blending_func(u,u_i,k)
         P_u = B_spline(N,u,u_i,P_i,k)
 
-        plot_bsline_blendfunc(t,N, P_i, P_u, u, u_i,k);
+        plot_bspline_blendfunc(t,N, P_i, P_u, u, u_i,k);
